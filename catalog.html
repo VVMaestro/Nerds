@@ -1,0 +1,322 @@
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>Nerds - Каталог</title>
+  <link href="https://fonts.googleapis.com/css?family=Roboto:400,700&amp;subset=cyrillic" rel="stylesheet">
+  <link type="text/css" rel="stylesheet" href="styles/styles.css" />
+  <link type="text/css" rel="stylesheet" href="slider-native/slider-styles.css" />
+  <script type="text/javascript" src="slider-native/slider-script.js"></script>
+  <script type="text/javascript" src="scripts-catalog.js"></script>
+</head>
+<body>
+  <header class="page-header">
+    <nav class="main-nav container">
+      <p class="logo header__logo main-nav__item">
+        <a class="logo__link" href="nerds-index.html">
+          <img class="logo__image" src="img/svg/nerds-logo.svg" width="160px" height="65px"
+          alt="Логотип магазина Nerds"/>
+        </a>
+      </p>
+      <ul class="menu list page-header__menu main-nav__item">
+        <li class="menu__item list__item">
+          <a class="menu__link" href="nerds-index.html#studio">Студия</a>
+        </li>
+        <li class="menu__item list__item">
+          <a class="menu__link" href="nerds-index.html#partners">Клиенты</a>
+        </li>
+        <li class="menu__item list__item">
+          <a class="menu__link menu__link--active" href="#">Магазин</a>
+        </li>
+        <li class="menu__item list__item">
+          <a class="menu__link" href="nerds-index.html#contacts">Контакты</a>
+        </li>
+      </ul>
+      <p class="basket header__basket main-nav__item">
+        <a class="menu__link menu__link--basket" href="#">Корзина</a>
+      </p>
+    </nav>
+  </header>
+
+  <main class="page-main">
+    <div class="head__fone">
+      <h1 class="head">Магазин готовых шаблонов</h1>
+    </div>
+
+    <div class="main__wrapper container">
+      <section class="shop-filter">
+        <h2 class="visually-hidden">Фильтр готовых шаблонов</h2>
+
+        <form action="get" class="shop-filter__form">
+          <ul class="shop-filter__list list">
+            <li class="shop-filter__price">
+              <h3 class="shop-filter__head shop-filter__head--price">Стоимость:</h3>
+
+              <div class="range-slider__wrapper">
+                <div class="range-slider__background">
+                  <div class="range-slider">
+                    <div class="range-slider__between"></div>
+                    <button type="button" class="range-slider__button-1"></button>
+                    <button type="button" class="range-slider__button-2"></button>
+                  </div>
+                </div>
+                <p class="range-slider__values">
+                  <label class="range-slider__text">От
+                    <input type="number" class="range-slider__input1" name="min-price" value="0" min="0" max="20000">
+                  </label>
+                  <label class="range-slider__text">До
+                    <input type="number" class="range-slider__input2" name="max-price" value="15000" min="0" max="20000">
+                  </label>
+                </p>
+              </div>
+
+            </li>
+            <li class="shop-filter__grid">
+              <h3 class="shop-filter__head shop-filter__head--other">Сетка:</h3>
+              <ul class="list">
+                <li class="shop-filter__item">
+                  <label class="radio-button">
+                    <input type="radio" class="visually-hidden shop-filter__radio" name="grid" value="adaptive" checked/>
+                    <span class="shop-filter__radio-custom"></span>
+                    <span class="shop-filter__text">Адаптивная</span>
+                  </label>
+                </li>
+                <li class="shop-filter__item">
+                  <label class="radio-button">
+                    <input type="radio" class="visually-hidden shop-filter__radio" name="grid" value="fixed"/>
+                    <span class="shop-filter__radio-custom"></span>
+                    <span class="shop-filter__text">Фиксированная</span>
+                  </label>
+                </li>
+                <li class="shop-filter__item">
+                  <label class="radio-button">
+                    <input type="radio" class="visually-hidden shop-filter__radio" name="grid" value="flex"/>
+                    <span class="shop-filter__radio-custom"></span>
+                    <span class="shop-filter__text">Резиновая</span>
+                  </label>
+                </li>
+              </ul>
+            </li>
+            <li class="shop-filter__advantages">
+              <h3 class="shop-filter__head shop-filter__head--other">Особенности:</h3>
+              <ul class="list">
+                <li class="shop-filter__item">
+                  <label class="checkbox">
+                    <input type="checkbox" name="slider" class="visually-hidden shop-filter__checkbox">
+                    <span class="shop-filter__checkbox-custom"></span>
+                    <span class="shop-filter__text">Слайдер</span>
+                  </label>
+                </li>
+                <li class="shop-filter__item">
+                  <label class="checkbox">
+                    <input type="checkbox" name="advantanges" class="visually-hidden shop-filter__checkbox">
+                    <span class="shop-filter__checkbox-custom"></span>
+                    <span class="shop-filter__text">Блок преимуществ</span>
+                  </label>
+                </li>
+                <li class="shop-filter__item">
+                  <label class="checkbox">
+                    <input type="checkbox" name="news" class="visually-hidden shop-filter__checkbox">
+                    <span class="shop-filter__checkbox-custom"></span>
+                    <span class="shop-filter__text">Новости</span>
+                  </label>
+                </li>
+                <li class="shop-filter__item">
+                  <label class="checkbox">
+                    <input type="checkbox" name="galery" class="visually-hidden shop-filter__checkbox">
+                    <span class="shop-filter__checkbox-custom"></span>
+                    <span class="shop-filter__text">Галерея</span>
+                  </label>
+                </li>
+                <li class="shop-filter__item">
+                  <label class="checkbox">
+                    <input type="checkbox" name="basket" class=" visually-hidden shop-filter__checkbox">
+                    <span class="shop-filter__checkbox-custom"></span>
+                    <span class="shop-filter__text">Корзина</span>
+                  </label>
+                </li>
+              </ul>
+            </li>
+          </ul>
+          <input type="submit" class="shop-filter__submit button" value="Показать"/>
+        </form>
+      </section>
+
+      <section class="catalog">
+        <h2 class="visually-hidden">Каталог готовых шаблонов</h2>
+
+        <div class="sort">
+          <h3 class="sort__title shop-filter__head">Сортировать:</h3>
+          <ul class="sort__list list">
+            <li><ul class="list sort__case">
+              <li class="sort__item"><a href="#" class="sort__link sort__link--current">По цене</a></li>
+              <li class="sort__item"><a href="#" class="sort__link">По типу</a></li>
+              <li class="sort__item"><a href="#" class="sort__link">По названию</a></li>
+            </ul></li>
+            <li><ul class="sort__arrows list">
+                <li><a class="sort__arrow sort__arrow--down sort__arrow--current" href="#"><span class="visually-hidden">По убыванию</span></a></li>
+                <li><a class="sort__arrow sort__arrow--up" href="#"><span class="visually-hidden">По возрастанию</span></a></li>
+            </ul></li>
+          </ul>
+        </div>
+        <ul class="catalog__list list">
+          <li class="catalog__item">
+            <div class="catalog__modal">
+              <div class="catalog__container">
+                <h3 class="catalog__item-title">Sedona</h3>
+                <p class="catalog__info">
+                  Информационный сайт<br />для туристов
+                </p>
+                <a class="button catalog__price">9&nbsp900</a>
+              </div>
+            </div>
+            <img class="catalog__image" src="img/img-sedona.jpg" alt="Миниатюра сайта Sedona">
+          </li>
+          <li class="catalog__item">
+            <div class="catalog__modal">
+              <div class="catalog__container">
+                <h3 class="catalog__item-title">Pink App</h3>
+                <p class="catalog__info">
+                  Продуктовый лендинг<br />приложения для iOS и Android
+                </p>
+                <a class="button catalog__price">9&nbsp900</a>
+              </div>
+            </div>
+            <img class="catalog__image" src="img/img-pink.jpg" alt="Миниатюра сайта Pink">
+          </li>
+          <li class="catalog__item">
+            <div class="catalog__modal">
+              <div class="catalog__container">
+                <h3 class="catalog__item-title">Barbershop</h3>
+                <p class="catalog__info">
+                  Сайт салоны красоты.<br />Для мужчин, да.
+                </p>
+                <a class="button catalog__price">9&nbsp900</a>
+              </div>
+            </div>
+            <img class="catalog__image" src="img/img-barbershop.jpg" alt="Миниатюра сайта Borodinski">
+          </li>
+          <li class="catalog__item">
+            <div class="catalog__modal">
+              <div class="catalog__container">
+                <h3 class="catalog__item-title">Mishka</h3>
+                <p class="catalog__info">
+                  Интернет-магазин<br />вязаных игрушек
+                </p>
+                <a class="button catalog__price">9&nbsp900</a>
+              </div>
+            </div>
+            <img class="catalog__image" src="img/img-mishka.jpg" alt="Миниатюра сайта Mishka">
+          </li>
+          <li class="catalog__item">
+            <div class="catalog__modal">
+              <div class="catalog__container">
+                <h3 class="catalog__item-title">A Plus</h3>
+                <p class="catalog__info">
+                  Лендинг курсов повышения<br />квалификации
+                </p>
+                <a class="button catalog__price">9&nbsp900</a>
+              </div>
+            </div>
+            <img class="catalog__image" src="img/img-aplus.jpg" alt="Миниатюра сайта A Plus">
+          </li>
+          <li class="catalog__item">
+            <div class="catalog__modal">
+              <div class="catalog__container">
+                <h3 class="catalog__item-title">Кваст</h3>
+                <p class="catalog__info">
+                  Промо-сайт производителя<br />крафтового кваса
+                </p>
+                <a class="button catalog__price">9&nbsp900</a>
+              </div>
+            </div>
+            <img class="catalog__image" src="img/img-kvast.jpg" alt="Миниатюра сайта Кваст">
+          </li>
+        </ul>
+        <ul class="catalog__pagination-list list">
+          <li><a class="catalog__page-number catalog__page-number--current" href="#">1</a></li>
+          <li><a class="catalog__page-number" href="#">2</a></li>
+          <li><a class="catalog__page-number" href="#">3</a></li>
+          <li><a class="catalog__page-number catalog__next" href="#">Следующая</a></li>
+        </ul>
+      </section>
+    </div>
+
+    <section class="map">
+      <div class="map-box">
+        <div class="contacts">
+          <h2 class="contacts__content contacts__title">Nёrds disign studio</h2>
+          <p class="contacts__content contacts__adress">
+            191186, Санкт-Петербург, ул. Б. Конюшенная, д.19/8
+          </p>
+          <p class="contacts__content contacts__phone">
+            тел. +7 (812) 275-75-75
+          </p>
+          <button type="button" class="contacts__content button contacts__write">Напишите нам</button>
+        </div>
+        <span class="map__marker"></span>
+      </div>
+    </section>
+  </main>
+
+  <footer class="page-footer">
+    <div class="social container">
+
+      <h1 class="visually-hidden">Социальные сети</h1>
+      <div class="social__wrapper">
+        <p class="social__field">
+          <b class="social__title">Давайте дружить, это выгодно!</b>
+          <span class="social__text">Скидка 10% для друзей из социальных сетей.</span>
+        </p>
+        <ul class="social__list list">
+          <li class="social__item">
+            <a href="#" class="social__link social__link--vkontakte">
+              <span class="visually-hidden">Вконтакте</span>
+            </a>
+          </li>
+          <li class="social__item">
+            <a href="#" class="social__link social__link--facebook">
+              <span class="visually-hidden">Фейсбук</span>
+            </a>
+          </li>
+          <li class="social__item">
+            <a href="#" class="social__link social__link--instagram">
+              <span class="visually-hidden">Инстаграм</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+
+  <section class="nerds-modal">
+    <div class="write">
+      <h2 class="write__form-title">Напишите нам</h2>
+      <form class="write__form js__write-submit" action="index.html" method="post">
+        <div class="write__wrapper">
+          <div class="write__item">
+            <label>
+              <b>Ваше имя:</b><br />
+              <input class="write__field js__write-name" type="text" name="name" placeholder="Имя Фамилия"/>
+            </label>
+          </div>
+          <div class="write__item">
+            <label>
+              <b>Ваш e-mail:</b><br />
+              <input class="write__field js__write-email" type="email" name="email" placeholder="email@example.com"/>
+            </label>
+          </div>
+        </div>
+        <div class="write__item">
+          <label>
+            <b>Текст письма</b><br />
+            <textarea class="write__field js__write-text write__field--text" name="letter" placeholder="В свободной форме"></textarea>
+          </label>
+        </div>
+
+        <input class="button button--submit write__button" type="submit" />
+      </form>
+      <button type="button" class="write__cross"></button>
+    </div>
+  </section>
+</body>
+</html>
